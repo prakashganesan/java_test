@@ -1,11 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.javacodegeeks.examples</groupId>
-	<artifactId>maven-war-plugin-example</artifactId>
+	<groupId>com.prakash.examples</groupId>
+	<artifactId>maven-war</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>Maven war ::  example</name>
-	<url>http://maven.apache.org</url>
 	<packaging>war</packaging>
 
 	<properties>
@@ -36,4 +34,17 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>releases</id>
+			<url>http://localhost:8081/nexus/content/repositories/releases/</url>
+		</repository>
+  </distributionManagement>
+	
+	
 </project>
